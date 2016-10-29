@@ -28,7 +28,7 @@ namespace Zad1
         public void Add(TodoItem todoItem)
         {
             if (todoItem == null) throw new ArgumentNullException();
-            if (Get(todoItem.Id) == todoItem) throw new DuplicateTodoItemException();
+            if (Equals(Get(todoItem.Id), todoItem)) throw new DuplicateTodoItemException();
             _inMemoryTodoDatabase.Add(todoItem);
         }
 
